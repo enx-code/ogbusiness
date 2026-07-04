@@ -4,6 +4,8 @@ const services = [
   "Friendly bar team who serve, shake and keep the drinks moving",
 ];
 
+const serviceImages = ["freshcocktail.jpg", "cocktails.jpg", "staff.png"];
+
 const packages = [
   {
     name: "House Party",
@@ -73,12 +75,27 @@ const Home = () => {
           <h2>Party drinks without running the bar yourself.</h2>
         </div>
         <div className="service-grid">
-          {services.map((service) => (
-            <article className="service-card" key={service}>
+          {services.map((service, index) => (
+            <article
+              className="service-card"
+              key={service}
+              style={{
+                backgroundImage: `url(${import.meta.env.BASE_URL}${serviceImages[index]})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <span aria-hidden="true">
                 <img src={`${import.meta.env.BASE_URL}zagsIcon.svg`} alt="" />
               </span>
-              <p>{service}</p>
+              <p
+                style={{
+                  textShadow:
+                    "0 0 6px rgba(255, 255, 255, 1), 0 0 12px rgba(255, 255, 255, 1)",
+                }}
+              >
+                {service}
+              </p>
             </article>
           ))}
         </div>
