@@ -1,16 +1,50 @@
-# React + Vite
+# OG Cocktails
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing site for OG, a mobile cocktail service for parties and private events ("You supply, we shake"). Built with React and Vite, deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+**Live site:** https://enx-code.github.io/ogbusiness/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's on the site
 
-## React Compiler
+- **Hero** — intro and call-to-action (call / WhatsApp)
+- **Services** — what OG offers, shown as three cards with photo backgrounds
+- **How it works** — booking steps
+- **Packages** — House Party, Private Event, Big Night
+- **Booking** — contact section with phone and WhatsApp links
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- [React](https://react.dev) 19
+- [Vite](https://vite.dev) 8
+- [react-router-dom](https://reactrouter.com) (`HashRouter`, so it works on GitHub Pages without server-side routing)
+- Plain CSS ([src/css/style.css](src/css/style.css))
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```
+src/
+  components/
+    NavBar.jsx   # top nav with brand mark and links
+    Home.jsx     # all page sections
+  css/
+    style.css
+  App.jsx        # router setup
+  main.jsx       # entry point
+public/          # static assets (images, icons) served as-is
+```
+
+## Development
+
+```bash
+npm install
+npm run dev       # start local dev server
+npm run build     # production build to dist/
+npm run preview   # preview the production build locally
+npm run lint      # run ESLint
+```
+
+## Deployment
+
+Pushing to `main` triggers [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which builds the site and pushes `dist/` to the `gh-pages` branch. GitHub Pages is configured (Settings → Pages) to serve from the `gh-pages` branch, root folder.
+
+The Vite `base` in [vite.config.js](vite.config.js) is set to `/ogbusiness/` to match the GitHub Pages project path — update it if the repo is ever renamed.
