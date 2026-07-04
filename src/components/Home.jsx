@@ -32,7 +32,7 @@ const steps = [
 ];
 
 const Home = () => {
-  const cardImage = `${import.meta.env.BASE_URL}og-logo.svg`;
+  const cardImage = `${import.meta.env.BASE_URL}ogbar.jpg`;
 
   return (
     <main className="og-site" id="top">

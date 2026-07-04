@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <nav className="site-nav" aria-label="Main navigation">
       <a className="brand-mark" href="#top" aria-label="OG home">
-        <img src={`${import.meta.env.BASE_URL}og-icon.svg`} alt="" />
+        <img src={`${import.meta.env.BASE_URL}og-icon.png`} alt="" />
       </a>
 
       <ul className="nav-links">
