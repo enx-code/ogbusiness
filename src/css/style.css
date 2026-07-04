@@ -55,13 +55,13 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 58px;
+  min-width: 48px;
   min-height: 48px;
-  border: 1px solid var(--cream);
-  color: var(--cream);
-  font-size: 1.65rem;
-  font-weight: 800;
-  letter-spacing: 0;
+}
+
+.brand-mark img {
+  height: 44px;
+  width: auto;
 }
 
 .nav-links {
@@ -243,6 +243,11 @@ a {
   color: var(--coral);
   font-size: 1.5rem;
   font-weight: 900;
+}
+
+.service-card span img {
+  width: 20px;
+  height: 20px;
 }
 
 .service-card p,

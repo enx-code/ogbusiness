@@ -32,14 +32,14 @@ const steps = [
 ];
 
 const Home = () => {
-  const cardImage = `${import.meta.env.BASE_URL}og-card-front.jpg`;
+  const cardImage = `${import.meta.env.BASE_URL}og-logo.svg`;
 
   return (
     <main className="og-site" id="top">
       <section
         className="hero"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(9, 13, 17, 0.92), rgba(9, 13, 17, 0.62), rgba(9, 13, 17, 0.18)), url(${cardImage})`,
+          backgroundImage: `linear-gradient(90deg, rgba(9, 13, 17, 0.72) 0%, rgba(9, 13, 17, 0.32) 32%, rgba(9, 13, 17, 0) 58%), url(${cardImage})`,
         }}
       >
         <div className="hero-content">
@@ -75,7 +75,9 @@ const Home = () => {
         <div className="service-grid">
           {services.map((service) => (
             <article className="service-card" key={service}>
-              <span aria-hidden="true">+</span>
+              <span aria-hidden="true">
+                <img src={`${import.meta.env.BASE_URL}zagsIcon.svg`} alt="" />
+              </span>
               <p>{service}</p>
             </article>
           ))}

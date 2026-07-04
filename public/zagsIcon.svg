@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="380" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="whiteFill" cx="42%" cy="34%" r="80%">
+      <stop offset="0" stop-color="#ffffff"></stop>
+      <stop offset="0.6" stop-color="#f2f2f4"></stop>
+      <stop offset="1" stop-color="#d9dade"></stop>
+    </radialGradient>
+    <radialGradient id="blackFill" cx="60%" cy="30%" r="90%">
+      <stop offset="0" stop-color="#26262b"></stop>
+      <stop offset="0.55" stop-color="#141417"></stop>
+      <stop offset="1" stop-color="#050506"></stop>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#fff7e2"></stop>
+      <stop offset="0.16" stop-color="#f6e2a4"></stop>
+      <stop offset="0.42" stop-color="#bd8f36"></stop>
+      <stop offset="0.6" stop-color="#ffefb0"></stop>
+      <stop offset="0.82" stop-color="#8a5f1c"></stop>
+      <stop offset="1" stop-color="#e0bd63"></stop>
+    </linearGradient>
+    <filter id="chrome" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.9" result="blur"></feGaussianBlur>
+      <feSpecularLighting in="blur" surfaceScale="4.5" specularConstant="1.15" specularExponent="16" lighting-color="#fff3d6" result="spec">
+        <feDistantLight azimuth="232" elevation="58"></feDistantLight>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="specOut"></feComposite>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+        <feMergeNode in="specOut"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  
+  <circle cx="100" cy="100" r="90" fill="url(#whiteFill)"></circle>
+  <path d="M100,10 A90,90 0 0 1 100,190 A45,45 0 0 0 100,100 A45,45 0 0 1 100,10 Z" fill="url(#blackFill)"></path>
+  <circle cx="100" cy="55" r="14" fill="url(#whiteFill)"></circle>
+  <circle cx="100" cy="145" r="14" fill="url(#blackFill)"></circle>
+
+  
+  <g fill="none" stroke="url(#gold)" filter="url(#chrome)" stroke-linecap="round">
+    <circle cx="100" cy="100" r="90" stroke-width="3.4"></circle>
+    <circle cx="100" cy="100" r="83.5" stroke-width="1.5" opacity="0.85"></circle>
+    <path d="M100,10 A45,45 0 0 0 100,100 A45,45 0 0 1 100,190" stroke-width="3.4"></path>
+    <circle cx="100" cy="55" r="14" stroke-width="2.8"></circle>
+    <circle cx="100" cy="145" r="14" stroke-width="2.8"></circle>
+  </g>
+</svg>
